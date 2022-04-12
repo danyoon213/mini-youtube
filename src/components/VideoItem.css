@@ -1,3 +1,16 @@
-.card {
+.list-group-item {
+  width: 600px;
   cursor: pointer;
+}
+
+.card {
+  text-align: center;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.video-item-thumb {
+  height: 170px;
 }

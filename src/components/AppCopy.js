@@ -9,7 +9,7 @@ class App extends React.Component {
   state = { videos: [], selectedVideo: null };
 
   componentDidMount() {
-    this.onSearchSubmit("cats");
+    this.onSearchSubmit("react js");
   }
 
   onSearchSubmit = async (searchTerm) => {
@@ -31,21 +31,23 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="containerMain">
-        <SearchBar className="searchbar" onSearchSubmit={this.onSearchSubmit} />
+      <div className="container">
+        <SearchBar onSearchSubmit={this.onSearchSubmit} />
 
-        <div>
-          <VideoPlayer
-            className="video-player"
-            video={this.state.selectedVideo}
-          />
-        </div>
+        <div className="row mt-3">
+          <div className="col-8">
+            <VideoPlayer
+              className="video-player"
+              video={this.state.selectedVideo}
+            />
+          </div>
 
-        <div className="video-list">
-          <VideoList
-            onVideoClick={this.onVideoClick}
-            videos={this.state.videos}
-          />
+          <div className="col-4">
+            <VideoList
+              onVideoClick={this.onVideoClick}
+              videos={this.state.videos}
+            />
+          </div>
         </div>
       </div>
     );

@@ -1,4 +1,5 @@
 import React from "react";
+import "./VideoPlayer.css";
 
 const VideoPlayer = (props) => {
   if (!props.video) {
@@ -10,11 +11,12 @@ const VideoPlayer = (props) => {
   return (
     <div>
       <div>
-        <iframe title="video-player" src={videoSRC} />
+        <iframe className="video-player" title="video-player" src={videoSRC} />
       </div>
-      <div className="card">
+      <div className="card video-player-description">
         <h4>{props.video.snippet.title}</h4>
         <p>{props.video.snippet.description}</p>
+        <p>Channel: {props.video.snippet.channelTitle}</p>
       </div>
     </div>
   );

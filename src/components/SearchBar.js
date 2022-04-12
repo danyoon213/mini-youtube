@@ -20,12 +20,15 @@ class SearchBar extends React.Component {
       <div className="searchbar">
         <form onSubmit={this.onFormSubmit}>
           <div>
-            <label className="form-label">Video Search</label>
+            <label className="form-label">
+              <i class="fa-brands fa-youtube fa-xl"></i> Search For Videos
+            </label>
             <input
               className="form-control"
               type="text"
               value={this.state.searchTerm}
               onChange={this.onInputChange}
+              placeholder="Search!"
             />
           </div>
         </form>
