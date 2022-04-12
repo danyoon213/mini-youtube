@@ -32,14 +32,9 @@ body {
 
 @media only screen and (min-width: 1500px) {
   .containerMain {
-    grid-template-columns: 2.3fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-areas:
       "searchbar searchbar"
       "video-player video-list";
-  }
-  .video-list {
-    height: 960px;
-    overflow-y: scroll;
-    /* box-shadow: 2px 2px 7px rgba(120, 120, 255, 0.5); */
   }
 }
